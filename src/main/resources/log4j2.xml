@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+	<!-- @author diogo.moreira -->
+	
+	<Loggers>
+		<logger name="br.edu.ifpb.padroes" level="INFO"/>
+		<Root level="WARN">
+			<AppenderRef ref="DeveloperFullConsole" />
+		</Root>
+	</Loggers>	
+	
+	<Properties>
+		<Property name="developer.patternLayout">[%d{dd/MM/yyyy HH:mm:ss,SSS}] [%-5p] - %c{2}:%L - %m%n</Property>
+	</Properties>
+
+	<Appenders>
+		<!-- Developer Appenders -->
+		<Console name="DeveloperFullConsole" target="SYSTEM_OUT">
+			<PatternLayout pattern="${developer.patternLayout}" />
+		</Console>
+	</Appenders>
+	
+</Configuration>
